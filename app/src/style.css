@@ -48,10 +48,11 @@
     border: 4px gray;
 }
 
-#palettes-display {
-    display: flex;
-}
-
 #picker-button {
     background-color: darkgray;
+}
+
+#palettes-display {
+    display: flex;
+    align-items: center;
 }
