@@ -1,0 +1,57 @@
+* {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#picker {
+    display: flex;
+}
+
+#picker-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    width: 25%;
+    height: 400px;
+    padding: 5px;
+    border: 4px transparent;
+    margin: 10px;
+    box-shadow: 3px 3px 5px 6px gray, 3px 5px 5px 6px gray;
+}
+
+#colors {
+    display: flex;
+    background-color: gray;
+    justify-content: center;
+}
+
+#picker-form input {
+    display: inline-flex;
+    background-color: darkgray;
+}
+
+#picker-form input[type ="color"] {
+    display: inline-flex;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.picker-labels {
+    margin-bottom: 4px;
+    background-color: gray;
+}
+
+#temperature-fieldset {
+    background-color: gray;
+    border: 4px gray;
+}
+
+#palettes-display {
+    display: flex;
+}
+
+#picker-button {
+    background-color: darkgray;
+}

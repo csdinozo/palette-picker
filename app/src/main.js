@@ -1,4 +1,7 @@
-import './style.css'
-import crypto from 'node:crypto';
-
-crypto.randomUUID();
+import {
+    getPalettes,
+    setPalettes,
+    initPalettesIfEmpty,
+    addPalette,
+    removePalette
+} from './local-storage.js';  
