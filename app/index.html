@@ -13,18 +13,28 @@
         <h1>Palette Picker</h1>
       </header>
       <main>
-        <form id="picker-form">
-          <h2 class="picker-labels">Add a Palette</h2>
-          <label for="palette-title-input" class="picker-labels">Palette Title: </label>
-          <input type="text" name="paletteTitle" id="palette-title-input" required>
+        <section id="form-section" aria-label="section containing form for palette creation">
+        <form id="picker-form" aria-label="form for creating a new palette">
+          <h2 id="add-palette-label" class="picker-labels">Add a Palette</h2>
+
+          <section id="title" aria-label="section containing title input">
+            <label for="palette-title-input" class="picker-labels title">Palette Title: </label>
+            <input type="text" name="paletteTitle" id="palette-title-input" required>
+          </section>
 
           <div id="colors">
-            <label for="first-color" class="picker-labels"></label>
-            <input type="color" name="firstColor" id="first-color-input">
-            <label for="second-color" class="picker-labels"></label>
-            <input type="color" name="secondColor" id="second-color-input">
-            <label for="third-color" class="picker-labels"></label>
-            <input type="color" name="thirdColor" id="third-color-input">
+            <section id="first" aria-label="section containing selector for first color">
+              <input type="color" name="firstColor" id="first-color-input">
+              <label for="first-color" class="picker-labels">Color #1</label>
+            </section>
+            <section id="second" aria-label="section containing selector for second color">
+              <input type="color" name="secondColor" id="second-color-input">
+              <label for="second-color" class="picker-labels">Color #2</label>
+            </section>
+            <section id="third" aria-label="section containing selector for third color">
+              <input type="color" name="thirdColor" id="third-color-input">
+              <label for="third-color" class="picker-labels">Color #3</label>
+            </section>
           </div>
           
           <fieldset id="temperature-fieldset">
@@ -39,10 +49,11 @@
 
           <button type="submit" id="picker-button">Create the palette</button>
         </form>
+      </section>
 
-        <section id="palettes-display">
+      <section id="palettes-display" aria-label="display of all created palettes">
           <h2>Palettes Section</h2>
-          <ul id="palettes-list"></ul>
+          <ul id="palettes-list" aria-label="list of all created palettes"></ul>
         </section>
       </main>
     </div>
