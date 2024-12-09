@@ -14,8 +14,8 @@ const temperatures = {
  */
 export const displayPalette = (paletteObj) => {
     const palette = document.createElement("li");
-    const palettesDisplay = document.querySelector("ul#palettes-display");
-    palettesDisplay.append(palette);
+    const palettesList = document.querySelector("ul#palettes-list");
+    palettesList.append(palette);
 
     // UUID
     const uuid = paletteObj.uuid;
@@ -25,6 +25,7 @@ export const displayPalette = (paletteObj) => {
     // title of palette
     const paletteTitle = document.createElement("h3");
     paletteTitle.innerText = paletteObj.title;
+    paletteTitle.style.backgroundColor = "gray";
     palette.appendChild(paletteTitle);
 
     // colors of palette
@@ -38,12 +39,16 @@ export const displayPalette = (paletteObj) => {
 
         const textExampleText = document.createElement("span");
         textExampleText.classList.add("text-examples");
-        textExampleText.textContent = "Text";
+        textExampleText.textContent = "Text ";
+        textExampleText.style.color = "white";
+        textExampleText.style.backgroundColor = color;
         paletteColorContainer.appendChild(textExampleText);
 
         const textExampleExample = document.createElement("span");
         textExampleExample.classList.add("text-examples");
         textExampleExample.textContent = "Example";
+        textExampleExample.style.color = "black";
+        textExampleExample.style.backgroundColor = color;
         paletteColorContainer.appendChild(textExampleExample);
 
         paletteColor.appendChild(paletteColorContainer);
@@ -52,7 +57,8 @@ export const displayPalette = (paletteObj) => {
         copyButton.className = "color-copy-buttons";
         const defaultCopyButtonText = `Copy ${color}`;
         copyButton.textContent = defaultCopyButtonText;
-        copyButton.setAttribute("aria-label", `copy ${color} to clipboard`)
+        copyButton.setAttribute("aria-label", `copy ${color} to clipboard`);
+        copyButton.style.backgroundColor = "lightgray";
 
         copyButton.addEventListener("click", () => {
             // copies `color` to clipboard

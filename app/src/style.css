@@ -79,6 +79,13 @@
 }
 
 #palettes-display {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    width: 100%;
+}
+
+.palettes {
+    display: grid;
+    background-color: gray;
 }
