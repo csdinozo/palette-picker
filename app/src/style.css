@@ -78,14 +78,14 @@
     background-color: darkgray;
 }
 
-#palettes-display {
+#palettes-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    width: 100%;
+    gap: 20px;
 }
 
 .palettes {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: gray;
 }
