@@ -1,0 +1,91 @@
+* {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#form-section {
+    display: flex;
+    justify-content: center;
+}
+
+#picker-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    width: 25%;
+    height: 400px;
+    padding: 5px;
+    border: 4px transparent;
+    margin: 100px;
+    box-shadow: 3px 3px 5px 6px gray, 3px 5px 5px 6px gray;
+}
+
+#add-palette-label {
+    margin-bottom: 20px;
+    font-size: 150%;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    align-items: center;
+}
+
+.title {
+    margin-right: 10px;
+}
+
+#colors {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+}
+
+#first, #second, #third {
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#picker-form input {
+    background-color: darkgray;
+}
+
+#picker-form input[type ="color"] {
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.picker-labels {
+    margin-bottom: 4px;
+    background-color: gray;
+}
+
+#temperature-fieldset {
+    background-color: gray;
+    border: 4px gray;
+}
+
+#picker-button {
+    background-color: darkgray;
+}
+
+#palettes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.palettes {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palette Picker</title>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Palette Picker</h1>
+      </header>
+      <main>
+        <section id="form-section" aria-label="section containing form for palette creation">
+        <form id="picker-form" aria-label="form for creating a new palette">
+          <h2 id="add-palette-label" class="picker-labels">Add a Palette</h2>
+
+          <section id="title" aria-label="section containing title input">
+            <label for="palette-title-input" class="picker-labels title">Palette Title: </label>
+            <input type="text" name="paletteTitle" id="palette-title-input" required>
+          </section>
+
+          <div id="colors">
+            <section id="first" aria-label="section containing selector for first color">
+              <input type="color" name="firstColor" id="first-color-input">
+              <label for="first-color" class="picker-labels">Color #1</label>
+            </section>
+            <section id="second" aria-label="section containing selector for second color">
+              <input type="color" name="secondColor" id="second-color-input">
+              <label for="second-color" class="picker-labels">Color #2</label>
+            </section>
+            <section id="third" aria-label="section containing selector for third color">
+              <input type="color" name="thirdColor" id="third-color-input">
+              <label for="third-color" class="picker-labels">Color #3</label>
+            </section>
+          </div>
+          
+          <fieldset id="temperature-fieldset">
+            <legend class="picker-labels">Temperature</legend>
+            <input type="radio" name="temperatureInput" id="warm" value="warm">
+            <label for="warm" class="picker-labels">Warm</label>
+            <input type="radio" name="temperatureInput" id="neutral" value="neutral" checked>
+            <label for="neutral" class="picker-labels">Neutral</label>
+            <input type="radio" name="temperatureInput" id="cool" value="cool">
+            <label for="cool" class="picker-labels">Cool</label>
+          </fieldset>
+
+          <button type="submit" id="picker-button">Create the palette</button>
+        </form>
+      </section>
+
+      <section id="palettes-display" aria-label="display of all created palettes">
+          <h2>Palettes Section</h2>
+          <ul id="palettes-list" aria-label="list of all created palettes"></ul>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./src/dom-helpers.js"></script>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
